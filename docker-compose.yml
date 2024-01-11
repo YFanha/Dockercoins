@@ -2,17 +2,17 @@ version: "2"
 
 services:
   rng:
-    build: rng
+    image: yfanha/dockercoins_rng
     ports:
     - "8001:80"
 
   hasher:
-    build: hasher
+    image: yfanha/dockercoins_hasher
     ports:
     - "8002:80"
 
   webui:
-    build: webui
+    image: yfanha/dockercoins_webui
     ports:
     - "8000:80"
     volumes:
@@ -22,5 +22,5 @@ services:
     image: redis
 
   worker:
-    build: worker
+    image: yfanha/dockercoins_worker:0.1
 
